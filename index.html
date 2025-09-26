@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode - Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Bem Vindo ao Toggle Dark Mode!</h1>
+    <p><strong>Este site foi feito com o intuito de praticar o código utilizado e testar seu funcionamento</strong></p>
+    <div class="togglecontainer">
+        <input type="checkbox" name="" id="botao">
+        <label for="botao" class="button"></label>
+    </div>
+
+    <footer>
+        <h2>Desenvolvido Por Gustavo Donadei Manfredini</h2>
+    </footer>
+</body>
+<script>
+    const botao = document.getElementById('botao')
+    const html = document.documentElement
+    
+    if(localStorage.getItem('theme') === 'dark'){
+        html.classList.toggle('dark-mode')
+    }
+    
+    function check(){
+        html.classList.toggle('dark-mode')
+
+        if(html.classList.contains('dark-mode')){
+            localStorage.setItem('theme', 'dark')
+        }else{
+            localStorage.setItem('theme', 'white')
+        }
+    }
+
+    botao.addEventListener('click', ()=>check())
+</script>
+</html>

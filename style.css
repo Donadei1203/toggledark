@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 919px;
+    transition-duration: 500ms;
+}
+
+footer {
+    animation-name: footer;
+    animation-duration: 2s;
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 15%;
+    width: 100%;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 500ms;
+}
+
+.dark-mode footer{
+    background-color: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    transition-duration: 500ms;
+}
+
+@keyframes footer{
+    0%{
+        height: 0%;
+    }100%{
+        height: 15%;
+    }
+}
+
+.dark-mode body{
+    background:linear-gradient(to bottom right,#1c1c36 , #000000);
+    transition-duration: 500ms;
+}
+
+
+@keyframes titulo{
+0% {
+    font-size: 10px;
+} 100%{
+    font-size: 50px;
+}
+}
+@keyframes paragrafo{
+    0%{ font-size: 10px;
+
+    }100% {
+        font-size: 20px;
+    }
+}
+
+@keyframes botao{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 140px;
+        height: 60px;
+    }
+}
+
+@keyframes botao1{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 55px;
+        height: 55px;
+    }
+}
+
+body h1{
+    margin: 300px 0px 0px 0px;
+    animation-name: titulo;
+    animation-duration: 1500ms;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    animation-iteration-count:initial;
+    transition-duration: 500ms;
+}
+
+body p{
+    animation-name: paragrafo;
+    animation-duration: 2000ms;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    animation-iteration-count:initial;
+    transition-duration: 500ms;
+}
+
+.dark-mode body p, .dark-mode body h1{
+    color: white;
+    transition-duration: 500ms;
+}
+
+.button{
+    animation-name: botao;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    background-color: darkgray;
+    width: 140px;
+    height: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+}
+
+.button::before {
+    animation-name: botao1;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    content: '';
+    background-color: #2d2d2d;
+    height: 55px;
+    width: 55px;
+    border-radius: 50px;
+    transition-duration: 200ms;
+}
+
+.dark-mode .button::before{
+    left: 80px;
+}
+
+.togglecontainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px 0px 0px;
+}
+
+.togglecontainer input{
+    height: 0px;
+}
